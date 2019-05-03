@@ -1,53 +1,240 @@
 <!DOCTYPE html>
-<!-- saved from url=(0051)https://getbootstrap.com/docs/4.1/examples/sign-in/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+<html lang="en">
 
-    <title>Signin Template for Bootstrap</title>
+<head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./sign-in_files/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Custom styles for this template -->
-    <link href="./sign-in_files/signin.css" rel="stylesheet">
+  <title>Innovecare</title>
 
-    <script type="text/javascript">
-      function Nova()
-      {
-        location.href=" dashboard.htm"
-      }
-    </script>
-  </head>
+  <!-- Fonts-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
-  <body class="text-center">
-    <form class="form-signin">
-      <header>
-        <!-- Sem cabeçalho -->
-      </header>
+  <!-- Style-->
+  <link  rel="stylesheet" type="text/css"href="css/bootstrap-reboot.min.css">
+  <link  rel="stylesheet" type="text/css"href="css/bootstrap.min.css">
+  <link  rel="stylesheet" type="text/css"href="css/bootstrap-grid.min.css">
+  <link  rel="stylesheet" type="text/css"href="css/sb-admin-2.min.css">
+  <link  rel="stylesheet" type="text/css"href="css/index.css">
+  <link  rel="stylesheet" type="text/css"href="css/slicknav.min.css">
+  <link  rel="stylesheet" type="text/css"href="css/navigation.css">
 
-      <main>
-        <img class="mb-4" src="./sign-in_files/doctor.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Autenticação</h1>
-        <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de email" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Lembrar-me neste computador
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="Nova()">Entrar</button>
-      </main>
 
-      <footer>
-        <p class="mt-5 mb-3 text-muted">© TCC UNIP 2018 - Buna, Gabriel, Guilherme, Raphael</p>
-      </footer>
-    </form>
+  <!-- JavaScript-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/Chart.min.js"></script>
+  <script src="js/chartjs-plugin-doughnutlabel.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+</head>
+
+<body id="page-top" class=" bg-gray-100">
+
+
   
+  <!-- End of Topbar -->
+  <nav class="menu-navigation-icons navbar navbar-expand navbar-light bg-white mb-4 static-top shadow bd-exemple">
+      <a href="#" class="menu-grey" style="width: 55px;"><i class="fas fa-question"></i></a>
+      <a href="#" class="menu-blue"><i class="fas fa-file-alt"></i><span>Protocolo</span></a>
+      <a href="#" class="menu-red"><i class="fas fa-comment-alt"></i><span>Chat</span></a>
+      <a href="#" class="menu-grey"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+      <a href="#" class="menu-grey"><i class="fas fa-calendar-alt"></i><span>Agenda</span></a>
+      <a href="#" class="menu-grey"><i class="fas fa-user-injured"></i><span>Pacientes</span></a>
+      <a href="#" class="menu-grey"><i class="fas fa-user-md"></i><span id="menu-equipe">Equipe Multidiciplinar</span></a>
+      <a href="#" class="menu-grey"><i class="fas fa-hospital"></i><span>Planos de Saúde</span></a>
+      <a href="#" class="menu-grey"><i class="fas fa-capsules"></i><span>Medicamentos</span></a>
+      <a href="#" class="menu-grey"><i class="fas fa-user-circle"></i><span id="menu-email">teste@innovecare.com.br</span></a>
+      <a href="#" class="menu-grey"  style="width: 55px;"><i class="fas fa-sign-out-alt"></i></a>
+  </nav>
+  <!-- Central -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Planos Ativos -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-invisible shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                  <i class="fas fa-inbox fa-2x"></i>
+                  Planos Ativos
+                </div>
+                <div class="row no-gutters align-items-center">
+                  <div class="col-auto text-center lp-up">
+                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">250</div>
+                  </div>
+                  <div class="col text-center">
+                    <span class="border-left-info"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto text-center hp-up">
+                <i class="fas fa-arrow-up"></i>
+                13.8%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pacientes -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-invisible shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                  <i class="fas fa-user-injured fa-2x"></i>
+                  Pacientes
+                </div>
+                <div class="row no-gutters align-items-center">
+                  <div class="col-auto text-center lp-up">
+                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800 ">100</div>
+                  </div>
+                  <div class="col text-center">
+                    <span class="border-left-info"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto text-center hp-up">
+                <i class="fas fa-arrow-down"></i>
+                13.8%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Médicos -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-invisible shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                  <i class="fas fa-user-md fa-2x"></i>
+                  Médicos
+                </div>
+                <div class="row no-gutters align-items-center">
+                  <div class="col-auto text-center lp-up">
+                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">15</div>
+                  </div>
+                  <div class="col text-center">
+                    <span class="border-left-info"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto text-center hp-up">
+                <i class="fas fa-arrow-down"></i>
+                13.8%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Agenda -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-invisible shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                  <i class="fas fa-calendar-alt fa-2x"></i>
+                  Agenda
+                </div>
+                <div class="row no-gutters align-items-center text-center">
+                  <div class="col-auto lp-up">
+                    <div class="h6 mb-0 mr-3  text-gray-800">Hoje<br>21</div>
+                  </div>
+                  <div class="col text-center">
+                    <span class="border-left-info"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto h6 mb-0 mr-3 text-gray-800 text-center agp-up">
+                Atrasado<br>3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim Central -->
 
-</body></html>
+  <!-- Gráfico Inferior -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Efeitos Colaterais -->
+      <div class="col-xl-6 col-md-6 mb-4">
+        <div class="card shadow mb-4">
+          <div class="card-header py-3 text-center">
+            <h6 class="m-0 font-weight-bold text-primary">Efeitos Colaterais</h6>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-4">
+                <div class="col text-center lp-bt"><span>Sintomas Manejados</span></div>
+                <div class="col">
+                  <canvas id="sintomas-chart"></canvas>
+                </div>
+                <hr>
+                <div class="col text-center lp-bt"><span>Encaminhados ao<br>Pronto atendimento</span></div>
+                <div class="col">
+                  <canvas id="encaminhados-chart"></canvas>
+                </div>
+              </div>
+              <div class="col-xl-8 " style="border-left: 1px solid black;">
+                <div class="row h-100">
+                  <div class="col-6 col-sm-6 my-auto">
+                    <canvas id="total-chart"></canvas>
+                  </div>
+                  <div class="col-6 col-sm-6 my-auto">
+                    <canvas id="sucesso-chart" width="800" height="350"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Visão Geral dos Planos Terapêuticos -->
+      <div class="col-xl-6 col-md-6 mb-4">
+        <div class="card shadow mb-4">
+          <div class="card-header py-3 text-center">
+            <h6 class="m-0 font-weight-bold text-primary">Visão Geral dos Planos Terapêuticos</h6>
+          </div>
+          <div class="card-body">
+            <div class="">
+              <canvas id="visao-chart" width="800" height="350" ></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim Gráfico Inferior -->
+
+
+
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/chart.js"></script>
+  <script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+  <!-- <script>
+    $(function(){
+        $('.menu-navigation-icons').slicknav();
+    });
+  </script> -->
+
+</body>
+
+</html>

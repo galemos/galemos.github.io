@@ -1,0 +1,46 @@
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+.bd-exemple {
+    width: 100%;
+    size: auto;
+}
+
+.bd-exemple .btn:not(:first-child):not(:last-child) {
+    width: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.first-last {
+    height: 62px;
+}
+
+.bd-exemple .btn{
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.border-invisible{
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.agp-up{
+    padding-top: 25px;
+}
+
+.hp-up{
+    padding-top: 20px;
+}
+
+.lp-up{
+    padding-top: 5px;
+}
+
+.btn-primary{
+    background-color: #229AD4;
+}
+
+.btn-danger{
+    background-color: #FF4A60
+}
