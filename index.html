@@ -2,238 +2,632 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Innovecare</title>
-
-  <!-- Fonts-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
-
-  <!-- Style-->
-  <link  rel="stylesheet" type="text/css"href="css/bootstrap-reboot.min.css">
-  <link  rel="stylesheet" type="text/css"href="css/bootstrap.min.css">
-  <link  rel="stylesheet" type="text/css"href="css/bootstrap-grid.min.css">
-  <link  rel="stylesheet" type="text/css"href="css/sb-admin-2.min.css">
-  <link  rel="stylesheet" type="text/css"href="css/index.css">
-  <link  rel="stylesheet" type="text/css"href="css/slicknav.min.css">
-  <link  rel="stylesheet" type="text/css"href="css/navigation.css">
-
-
-  <!-- JavaScript-->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/Chart.min.js"></script>
-  <script src="js/chartjs-plugin-doughnutlabel.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.fittext.js"></script>
-  <script src="js/sb-admin-2.min.js"></script>
+    <title>APS 8º Período</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"
+        integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous">
+    </script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-4.css">
+    <!-- GitHub Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
-<body id="page-top" class=" bg-gray-100">
+<body data-spy="scroll">
 
 
-  
-  <!-- End of Topbar -->
-  <nav class="menu-navigation-icons navbar navbar-expand navbar-light bg-white mb-4 static-top shadow bd-exemple">
-      <a href="#" class="menu-grey" style="width: 55px;"><i class="fas fa-question"></i></a>
-      <a href="#" class="menu-blue"><i class="fas fa-file-alt"></i><span>Protocolo</span></a>
-      <a href="#" class="menu-red"><i class="fas fa-comment-alt"></i><span>Chat</span></a>
-      <a href="#" class="menu-grey"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
-      <a href="#" class="menu-grey"><i class="fas fa-calendar-alt"></i><span>Agenda</span></a>
-      <a href="#" class="menu-grey"><i class="fas fa-user-injured"></i><span>Pacientes</span></a>
-      <a href="#" class="menu-grey"><i class="fas fa-user-md"></i><span id="menu-equipe">Equipe Multidiciplinar</span></a>
-      <a href="#" class="menu-grey"><i class="fas fa-hospital"></i><span>Planos de Saúde</span></a>
-      <a href="#" class="menu-grey"><i class="fas fa-capsules"></i><span>Medicamentos</span></a>
-      <a href="#" class="menu-grey"><i class="fas fa-user-circle"></i><span id="menu-email">teste@innovecare.com.br</span></a>
-      <a href="#" class="menu-grey"  style="width: 55px;"><i class="fas fa-sign-out-alt"></i></a>
-  </nav>
-  <!-- Central -->
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Planos Ativos -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-invisible shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                  <i class="fas fa-inbox fa-2x"></i>
-                  Planos Ativos
+
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- ******HEADER****** -->
+    <header id="header" class="header">
+        <div class="container">
+            <h1 class="logo float-left">
+                <a class="scrollto" href="#promo">
+                    <span class="logo-title">Tabelas e Posicionamento CSS
+                    </span>
+                </a>
+            </h1>
+            <!--//logo-->
+            <nav id="main-nav" class="main-nav navbar-expand-md float-right" role="navigation">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--//nav-toggle-->
+
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item sr-only"><a class="nav-link scrollto" href="#promo">Home</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#about">Introdução</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#features">Tópicos</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#docs">Exemplos</a></li>
+                        <li class="nav-item last"><a class="nav-link scrollto" href="#contact">Encerramento</a></li>
+                    </ul>
+                    <!--//nav-->
                 </div>
-                <div class="row no-gutters align-items-center">
-                  <div class="col-auto text-center lp-up">
-                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">250</div>
-                  </div>
-                  <div class="col text-center">
-                    <span class="border-left-info"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto text-center hp-up">
-                <i class="fas fa-arrow-up"></i>
-                13.8%
-              </div>
-            </div>
-          </div>
+                <!--//navabr-collapse-->
+            </nav>
+            <!--//main-nav-->
         </div>
-      </div>
-      <!-- Pacientes -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-invisible shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                  <i class="fas fa-user-injured fa-2x"></i>
-                  Pacientes
-                </div>
-                <div class="row no-gutters align-items-center">
-                  <div class="col-auto text-center lp-up">
-                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800 ">100</div>
-                  </div>
-                  <div class="col text-center">
-                    <span class="border-left-info"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto text-center hp-up">
-                <i class="fas fa-arrow-down"></i>
-                13.8%
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Médicos -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-invisible shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                  <i class="fas fa-user-md fa-2x"></i>
-                  Médicos
-                </div>
-                <div class="row no-gutters align-items-center">
-                  <div class="col-auto text-center lp-up">
-                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">15</div>
-                  </div>
-                  <div class="col text-center">
-                    <span class="border-left-info"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto text-center hp-up">
-                <i class="fas fa-arrow-down"></i>
-                13.8%
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Agenda -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-invisible shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                  <i class="fas fa-calendar-alt fa-2x"></i>
-                  Agenda
-                </div>
-                <div class="row no-gutters align-items-center text-center">
-                  <div class="col-auto lp-up">
-                    <div class="h6 mb-0 mr-3  text-gray-800">Hoje<br>21</div>
-                  </div>
-                  <div class="col text-center">
-                    <span class="border-left-info"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto h6 mb-0 mr-3 text-gray-800 text-center agp-up">
-                Atrasado<br>3
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim Central -->
+    </header>
+    <!--//header-->
 
-  <!-- Gráfico Inferior -->
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Efeitos Colaterais -->
-      <div class="col-xl-6 col-md-6 mb-4">
-        <div class="card shadow mb-4">
-          <div class="card-header py-3 text-center">
-            <h6 class="m-0 font-weight-bold text-primary">Efeitos Colaterais</h6>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-xl-4">
-                <div class="col text-center lp-bt"><span>Sintomas Manejados</span></div>
-                <div class="col">
-                  <canvas id="sintomas-chart"></canvas>
-                </div>
-                <hr>
-                <div class="col text-center lp-bt"><span>Encaminhados ao<br>Pronto atendimento</span></div>
-                <div class="col">
-                  <canvas id="encaminhados-chart"></canvas>
-                </div>
-              </div>
-              <div class="col-xl-8 " style="border-left: 1px solid black;">
-                <div class="row h-100">
-                  <div class="col-6 col-sm-6 my-auto">
-                    <canvas id="total-chart"></canvas>
-                  </div>
-                  <div class="col-6 col-sm-6 my-auto">
-                    <canvas id="sucesso-chart" width="800" height="350"></canvas>
-                  </div>
-                </div>
-              </div>
+    <!-- ******PROMO****** -->
+    <section id="promo" class="promo section offset-header">
+        <div class="container text-center">
+            <h2 class="title"><span class="highlight">APS</span></h2>
+            <p class="intro">Atividades Práticas Supervisionadas<br>8º Semestre Ciência da Computação</p>
+            <div class="btns">
+                <a class="btn btn-cta-primary" href="https://github.com/gablemos/APS8" target="_blank">GitHub</a>
             </div>
-          </div>
+            <ul class="meta list-inline">
+            </ul>
+            <!--//meta-->
         </div>
-      </div>
-      <!-- Visão Geral dos Planos Terapêuticos -->
-      <div class="col-xl-6 col-md-6 mb-4">
-        <div class="card shadow mb-4">
-          <div class="card-header py-3 text-center">
-            <h6 class="m-0 font-weight-bold text-primary">Visão Geral dos Planos Terapêuticos</h6>
-          </div>
-          <div class="card-body">
-            <div class="">
-              <canvas id="visao-chart" width="800" height="350" ></canvas>
+        <!--//container-->
+        <div class="social-media">
+
+        </div>
+    </section>
+    <!--//promo-->
+
+    <!-- ******ABOUT****** -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="title text-center">O que são tabelas e posicionamentos CSS?</h2>
+            <div class="code-block">
+                <p class="intro text-center">As tabelas são definidas com a tag <code class="language-markup"> &lttable&gt </code>. Uma tabela é dividida em linhas (com a tag <code class="language-markup"> &lttr&gt </code>) onde tr significa table row, ou linha da tabela, e cada linha é dividida em células de dados (com a tag <code class="language-markup"> &lttd&gt </code>). As letras td significam "table data," que é o conteúdo de uma célula de dados. Uma célula de dados pode conter texto, imagens, listas, parágrafos, formulários, filetes horizontias, tabelas, etc.<br><br>Veremos como montar tabelas, adicionar bordas e posiciona-las de forma a comportar suas informações de forma organizada.</p>
+                <h2 class="title text-center">Quais tecnologias foram usadas no projeto?</h2>
+                <div class="row">
+                    <div class="item col-lg-4 col-md-6 col-12">
+                        <div class="icon-holder">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="sub-title">HTML</h3>
+                            <p>Significa "Hypertext Markup Language", ou seja uma Linguagem para Marcação de Hipertexto.
+                                Esta marcação é interpretada pelo navegador.</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//item-->
+                    <div class="item col-lg-4 col-md-6 col-12">
+                        <div class="icon-holder">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="sub-title">CSS</h3>
+                            <p>Significa "Cascading Style Sheets", é uma linguagem de marcação de estilo. Esta marcação
+                                é interpretada pelo navegador.</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//item-->
+                    <div class="item col-lg-4 col-md-6 col-12">
+                        <div class="icon-holder">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="sub-title">JavaScript</h3>
+                            <p>É uma linguagem de programação baseada em scripts e interpretada pelo navegador.</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//item-->
+                    <div class="clearfix visible-md"></div>
+                    <div class="item col-lg-4 col-md-6 col-12">
+                        <div class="icon-holder">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="sub-title">Visual Studio Code</h3>
+                            <p>O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para
+                                Windows.</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//item-->
+                    <div class="item col-lg-4 col-md-6 col-12">
+                        <div class="icon-holder">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="sub-title">Bootstrap</h3>
+                            <p>Bootstrap é um framework front-end, ele provê componentes front-end (css, sass, less e
+                                js) prontos pra você utilizar na criação de páginas.</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//item-->
+                    <div class="item col-lg-4 col-md-6 col-12">
+                        <div class="icon-holder">
+                            <i class="fab fa-font-awesome"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="sub-title">Font-Awesome</h3>
+                            <p>É um conjunto de ferramentas de fontes e ícones com base em CSS e LESS. Feito para uso
+                                com o Bootstrap.</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//item-->
+                    <div class="item col-lg-4 col-md-6 col-12">
+                        <div class="icon-holder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="sub-title">Prism</h3>
+                            <p>É uma biblioteca para realçar sintaxes.</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//item-->
+                </div>
+                <!--//row-->
             </div>
-          </div>
+            <!--//container-->
+    </section>
+    <!--//about-->
+
+    <!-- ******FEATURES****** -->
+    <section id="features" class="features section">
+        <div class="container text-center">
+            <h2 class="title">Tópicos</h2>
+            <ul class="feature-list list-unstyled">
+                <li>
+                    <i class="fas fa-check"></i> Tabelas
+                    <ul class="feature-list list-unstyled">
+                        <li><i class="fas fa-check"></i> Marcação de tabelas</li>
+                        <li><i class="fas fa-check"></i> Elementos th, caption e atributo summary</li>
+                        <li><i class="fas fa-check"></i> Elementos thead, tfoot e tbody</li>
+                        <li><i class="fas fa-check"></i> Atributos id e header</li>
+                        <li><i class="fas fa-check"></i> Elementos colgroup , col e atributo scope</li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-check"></i> Dicas para marcar tabelas</li>
+                <li><i class="fas fa-check">
+                    </i> Estilização de tabelas
+                </li>
+                <li><i class="fas fa-check"></i> Esquemas de posicionamento CSS</li>
+                <li><i class="fas fa-check"></i> Posicionamento com z-index</li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim Gráfico Inferior -->
+        <!--//container-->
+    </section>
+    <!--//features-->
 
+    <!-- ******DOCS****** -->
+    <section id="docs" class="docs section">
+        <div class="container">
+            <div class="docs-inner">
+                <h2 class="title text-center">Tabelas</h2>
+                <div class="block">      
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p>              
+                    <ul class="list-unstyled">
+                        <li><strong>Marcação de tabelas:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                        <li><strong>Elementos th, caption e atributo summary:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                        <li><strong>Elementos thead, tfoot e tbody:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                        <li><strong>Atributos id e header:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                        <li><strong>Elementos colgroup , col e atributo scope:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                    </ul>
+                    <h3 class="sub-title text-center">HTML</h3>
+                    <div class="code-block">
+                        <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                        <pre><code class="language-markup">
+    &lttable&gt
+      &lttr&gt
+        &ltth&gtCol1&lt/th&gt
+        &ltth&gtCol2&lt/th&gt
+      &lt/tr&gt
+      &lttr&gt
+        &lttd&gtRow1&lt/td&gt
+        &lttd&gtRow2&lt/td&gt
+      &lt/tr&gt
+      &lttr&gt
+        &lttd&gtRow3&lt/td&gt
+        &lttd&gtRow4&lt/td&gt
+      &lt/tr&gt
+      &lttr&gt
+        &lttd&gtRow5&lt/td&gt
+        &lttd&gtRow6&lt/td&gt
+      &lt/tr&gt
+    &lt/table&gt
+                     </code></pre>
+                    </div>
+                    <!--//code-block-->
+                </div>
+                <!--//block-->
+                
+                <div class="block">
+                    <h3 class="sub-title text-center">Resultado</h3>
+                    <table>
+                        <tr>
+                            <th>Col1</th>
+                            <th>Col2</th>
+                        </tr>
+                        <tr>
+                            <td>Row1</td>
+                            <td>Row2</td>
+                        </tr>
+                        <tr>
+                            <td>Row3</td>
+                            <td>Row4</td>
+                        </tr>
+                        <tr>
+                            <td>Row5</td>
+                            <td>Row6</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--//block-->
 
+            </div>
+            <!--//docs-inner-->
+        </div>
+        <!--//container-->
+    </section>
+    <!--//features-->
 
+    <!-- ******DOCS****** -->
+    <section id="docs" class="docs section">
+            <div class="container">
+                <div class="docs-inner">
+                    <h2 class="title text-center">Dicas para marcar tabelas</h2>
+                    <div class="block">      
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p> 
+                        <h3 class="sub-title text-center">HTML</h3>
+                        <div class="code-block">
+                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                            <pre><code class="language-markup">
+        &lttable&gt
+          &lttr&gt
+            &ltth&gtCol1&lt/th&gt
+            &ltth&gtCol2&lt/th&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow1&lt/td&gt
+            &lttd&gtRow2&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow3&lt/td&gt
+            &lttd&gtRow4&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow5&lt/td&gt
+            &lttd&gtRow6&lt/td&gt
+          &lt/tr&gt
+        &lt/table&gt
+                         </code></pre>
+                        </div>
+                        <!--//code-block-->
+                    </div>
+                    <!--//block-->
+                    
+                    <div class="block">
+                        <h3 class="sub-title text-center">Resultado</h3>
+                        <table>
+                            <tr>
+                                <th>Col1</th>
+                                <th>Col2</th>
+                            </tr>
+                            <tr>
+                                <td>Row1</td>
+                                <td>Row2</td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Row4</td>
+                            </tr>
+                            <tr>
+                                <td>Row5</td>
+                                <td>Row6</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--//block-->
+    
+                </div>
+                <!--//docs-inner-->
+            </div>
+            <!--//container-->
+        </section>
+        <!--//features-->
 
-  <!-- Scripts -->
-  <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/chart.js"></script>
-  <script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
-  <!-- <script>
-    $(function(){
-        $('.menu-navigation-icons').slicknav();
-    });
-  </script> -->
+        <!-- ******DOCS****** -->
+    <section id="docs" class="docs section">
+            <div class="container">
+                <div class="docs-inner">
+                    <h2 class="title text-center">Estilização de tabelas</h2>
+                    <div class="block">      
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p>              
+                        <ul class="list-unstyled">
+                            <li><strong>Bordas:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                            <li><strong>Tipografia e posicionamentos:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                            <li><strong>Cores de fundo:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                            <li><strong>Imagens de fundo:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                            <li><strong>Exemplo prático:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                        </ul>
+                        <h3 class="sub-title text-center">HTML</h3>
+                        <div class="code-block">
+                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                            <pre><code class="language-markup">
+        &lttable&gt
+          &lttr&gt
+            &ltth&gtCol1&lt/th&gt
+            &ltth&gtCol2&lt/th&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow1&lt/td&gt
+            &lttd&gtRow2&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow3&lt/td&gt
+            &lttd&gtRow4&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow5&lt/td&gt
+            &lttd&gtRow6&lt/td&gt
+          &lt/tr&gt
+        &lt/table&gt
+                         </code></pre>
+                        </div>
+                        <!--//code-block-->
+                    </div>
+                    <!--//block-->
+                    
+                    <div class="block">
+                        <h3 class="sub-title text-center">Resultado</h3>
+                        <table>
+                            <tr>
+                                <th>Col1</th>
+                                <th>Col2</th>
+                            </tr>
+                            <tr>
+                                <td>Row1</td>
+                                <td>Row2</td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Row4</td>
+                            </tr>
+                            <tr>
+                                <td>Row5</td>
+                                <td>Row6</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--//block-->
+    
+                </div>
+                <!--//docs-inner-->
+            </div>
+            <!--//container-->
+        </section>
+        <!--//features-->
+
+        <!-- ******DOCS****** -->
+    <section id="docs" class="docs section">
+            <div class="container">
+                <div class="docs-inner">
+                    <h2 class="title text-center">Esquemas de posicionamento CSS</h2>
+                    <div class="block">      
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p>              
+                        <ul class="list-unstyled">
+                            <li><strong>Esquema normal:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                            <li><strong>Esquema float:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                            <li><strong>Esquema absoluto:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                            
+                        </ul>
+                        <h3 class="sub-title text-center">HTML</h3>
+                        <div class="code-block">
+                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                            <pre><code class="language-markup">
+        &lttable&gt
+          &lttr&gt
+            &ltth&gtCol1&lt/th&gt
+            &ltth&gtCol2&lt/th&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow1&lt/td&gt
+            &lttd&gtRow2&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow3&lt/td&gt
+            &lttd&gtRow4&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow5&lt/td&gt
+            &lttd&gtRow6&lt/td&gt
+          &lt/tr&gt
+        &lt/table&gt
+                         </code></pre>
+                        </div>
+                        <!--//code-block-->
+                    </div>
+                    <!--//block-->
+                    
+                    <div class="block">
+                        <h3 class="sub-title text-center">Resultado</h3>
+                        <table>
+                            <tr>
+                                <th>Col1</th>
+                                <th>Col2</th>
+                            </tr>
+                            <tr>
+                                <td>Row1</td>
+                                <td>Row2</td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Row4</td>
+                            </tr>
+                            <tr>
+                                <td>Row5</td>
+                                <td>Row6</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--//block-->
+    
+                </div>
+                <!--//docs-inner-->
+            </div>
+            <!--//container-->
+        </section>
+        <!--//features-->
+
+        <!-- ******DOCS****** -->
+    <section id="docs" class="docs section">
+            <div class="container">
+                <div class="docs-inner">
+                    <h2 class="title text-center">Posicionamento com z-index</h2>
+                    <div class="block">      
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p>              
+                        <ul class="list-unstyled">
+                            <li><strong>Contexto para empilhamento:</strong> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue, feugiat id magna id, lacinia ultrices odio.</p></li>
+                        </ul>
+                        <h3 class="sub-title text-center">HTML</h3>
+                        <div class="code-block">
+                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                            <pre><code class="language-markup">
+        &lttable&gt
+          &lttr&gt
+            &ltth&gtCol1&lt/th&gt
+            &ltth&gtCol2&lt/th&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow1&lt/td&gt
+            &lttd&gtRow2&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow3&lt/td&gt
+            &lttd&gtRow4&lt/td&gt
+          &lt/tr&gt
+          &lttr&gt
+            &lttd&gtRow5&lt/td&gt
+            &lttd&gtRow6&lt/td&gt
+          &lt/tr&gt
+        &lt/table&gt
+                         </code></pre>
+                        </div>
+                        <!--//code-block-->
+                    </div>
+                    <!--//block-->
+                    
+                    <div class="block">
+                        <h3 class="sub-title text-center">Resultado</h3>
+                        <table>
+                            <tr>
+                                <th>Col1</th>
+                                <th>Col2</th>
+                            </tr>
+                            <tr>
+                                <td>Row1</td>
+                                <td>Row2</td>
+                            </tr>
+                            <tr>
+                                <td>Row3</td>
+                                <td>Row4</td>
+                            </tr>
+                            <tr>
+                                <td>Row5</td>
+                                <td>Row6</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--//block-->
+    
+                </div>
+                <!--//docs-inner-->
+            </div>
+            <!--//container-->
+        </section>
+        <!--//features-->
+    
+
+    
+
+    <!-- ******CONTACT****** -->
+    <section id="contact" class="contact section has-pattern">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center" style="color: white;">Perguntas?</h2>
+                <div class="author-message">
+                    <div class="profile">
+                        <img class="img-fluid" src="assets/images/profile.png" alt="" />
+                    </div>
+                    <!--//profile-->
+                    <div class="speech-bubble">
+                        <h3 class="sub-title">Acho que isso é tudo!</h3>
+                        <p>Ainda terei algumas provas a serem feitas, mas de uma forma geral concluir esta apresentação
+                            também encerra um ciclo da minha vida e gostaria de agradecer a todos que fizeram parte
+                            desta fase.</p>
+                        <p><strong>Agradecimentos especiais:</strong> Alguns mentores foram mais do que apenas
+                            educadores e me incentivaram a ir além, espero a colaboração de vocês fazendo boas
+                            recomendações para meu mestrado.</p>
+                        <div class="source">
+                            <span class="name">Gabriel Lemos</span>
+                            <br />
+                            <span class="title">Ciência da Computação</span>
+                        </div>
+                        <!--//source-->
+                    </div>
+                    <!--//speech-bubble-->
+                </div>
+                <!--//author-message-->
+            </div>
+            <!--//contact-inner-->
+        </div>
+        <!--//container-->
+    </section>
+    <!--//contact-->
+
+    <!-- ******FOOTER****** -->
+    <footer class="footer">
+        <div class="container text-center">
+            <small class="copyright">Feito com <i class="fas fa-heart"></i> por Gabriel Lemos</small>
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
 
 </body>
 
