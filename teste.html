@@ -2,55 +2,49 @@
 <html>
 
 <head>
+    <style>
+        .relative-parent {
+            background: #156236;
+        }
+
+        .relative {
+            background: #af8542;
+            height: 230px;
+            width: 300px;
+            position: relative;
+            top: 20px;
+            left: 45px;
+            text-align: justify;
+        }
+
+        .absolute {
+            background: #c590f5;
+            height: 60px;
+            width: 120px;
+            position: absolute;
+            top: 35px;
+            right: 32px;
+            text-align: center;
+        }
+
+        .img-float {
+            float: right;
+            width:170px;
+            height:170px;
+            margin-left:15px;
+        }
+        .img-zindex {
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
-
-  <table summary="Preços em reais  
-    no atacado e no varejo para duas bitolas 
-    de porcas e parafusos de latão e de aço.
-    Existem dois níveis de cabeçalhos de 
-    colunas." align="right">
-
-    <caption>
-      Preços em reais para porcas e parafusos de
-      latão e aço
-    </caption>
-
-    <colgroup>
-      <colgroup>
-        <colgroup>
-        <thead>
-      <tr>
-        <td></td>
-        <th scope="colgroup">Latão</th>
-        <th scope="colgroup">Aço</th </tr> <tr>
-        <td></td>
-        <th scope="col">Parafusos</th>
-        <th scope="col">Porcas</th>
-        <th scope="col">Parafusos</th>
-        <th scope="col">Porcas</th>
-      </tr>
-      </thead>
-    <tbody>
-      <tr>
-        <th scope="rowgroup">10cm</th>
-      </tr>
-      <tr>
-        <th scope="row">Atacado</th>
-        <td>1,00</td>
-        <td>1,25</td>
-        <td>1,20</td>
-        <td>1,00</td>
-      </tr>
-      <tr>
-        <th scope="row">Varejo</th>
-        <td>1,00</td>
-        <td>1,25</td>
-        <td>1,20</td>
-        <td>1,00</td>
-      </tr>
-  </table>
+    <h1>The z-index Property</h1>
+    <img class="img-zindex" src="bg.jpg" width="100" height="140">    
+    <p>Porque a imagem tem um z-index de -1, ela será colocada atrás do título.</p>
+    
 
 </body>
 

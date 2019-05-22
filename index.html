@@ -25,6 +25,46 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-4.css">
     <!-- GitHub Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+        .relative-parent {
+            background: #156236;
+        }
+
+        .relative {
+            background: #af8542;
+            height: 230px;
+            width: 300px;
+            position: relative;
+            top: 20px;
+            left: 45px;
+            text-align: justify;
+        }
+        .relative-zindex {
+            background: #af8542;
+            height: 230px;
+            width: 300px;
+            position: relative;
+            top: 20px;
+            left: 45px;
+            text-align: justify;
+            z-index: 1;
+        }
+
+        .absolute {
+            background: #c590f5;
+            height: 60px;
+            width: 120px;
+            position: absolute;
+            text-align: center;
+        }
+
+        .img-float {
+            float: right;
+            width:170px;
+            height:170px;
+            margin-left:15px;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll">
@@ -244,13 +284,13 @@
                         onde cada quadrado é uma célula.</p>
                     <ul class="list-unstyled">
                         <li>
-                            <strong>Marcação de tabelas:</strong>
+                            <strong><h6>Marcação de tabelas:</h6></strong>
                             <p>
                                 Uma tabela deve estar contida dentro desta tag <code class="language-markup">&lttable&gt ... &lt/table&gt</code> para representar a marcação de uma tabela.
                             </p>                            
                         </li>
                         <li>
-                            <strong>Elementos th, caption e atributo summary:</strong>
+                            <strong><h6>Elementos th, caption e atributo summary:</h6></strong>
                             <ol>
                                 <li>
                                     <p>
@@ -286,17 +326,17 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <p>A tag <code class="language-markup">&ltsummary&gt</code> define de forma visível um título para o elemtno <code class="language-markup">&ltdetails&gt</code>.
+                                    <p>O atributo <code class="language-markup">summary</code> não é propriamente um elemento como caption, mas um atributo para o elemento table. O conteúdo de <code class="language-markup">summary</code> não é renderizado na tela de navegadores gráficos mas serve como dado auxiliar para entendimento da tabela para usuários de leitores de tela e displays Braille.</p>
+
+                                    <p><code class="language-markup">summary</code> deve ser usado para descrever a finalidade primária da tabela e dar uma indicação da sua estrutura geral. A maioria das tecnologias assistivas lê o conteúdo de <code class="language-markup">summary</code> fornecendo logo no início da tabela uma informação que ajudará o usuário a interpretar a tabela. Para tabelas mais complexas o uso de <code class="language-markup">summary</code> é de muita importância.</p>
                                         <ul>
-                                            <li><p><strong>Nota:</strong> O título contém um evento de click para mostrar/esconder os detalhes.</p></li>
-                                            <li><p></p><strong>Observação:</strong> O elemento <code class="language-markup">&ltsummary&gt</code> precisa ser o primeiro depois do elemento <code class="language-markup">&ltdetails&gt</code>.</p></li>
+                                            <li><p></p><strong>Observação:</strong> <code class="language-markup">&lttable summary="text"&gt</code>.</p></li>
                                         </ul>
-                                    </p>
                                 </li>
                             </ol>
                         </li>
 
-                        <li><strong>Elementos thead, tbody e tfoot:</strong>
+                        <li><strong><h6>Elementos thead, tbody e tfoot:</h6></strong>
                             <p>
                                 A tag <code class="language-markup">&ltthead&gt</code> é usada para agrupar o conteúdo do cabeçalho de uma tabela. É usada jungo com as tags <code class="language-markup">&lttbody&gt</code> e <code class="language-markup">&lttfoot&gt</code>, que especificam cada parte da tabela (header, body e footer = cabeçalho, corpo e rodapé).
                             </p>
@@ -309,7 +349,7 @@
                                     <li><p></p><strong>Dica:</strong> Apesar deste elemento não afetar o layout da tabela, podem ser usado como elemento para estilização com CSS.</p></li>
                                 </ul>
                             </p>      
-                            <p>Modo de uso:
+                            <p><strong>Modo de uso:</strong>
                                 <ul>
                                     <li>
                                         <p>A tag  <code class="language-markup">&ltthead&gt</code> deve ser usada no seguinte contexto: Como um filho de um elemento <code class="language-markup">&lttable&gt</code> , depois de qualquer elemento <code class="language-markup">&ltcaption&gt</code>,  <code class="language-markup">&ltcolgroup&gt</code> , e antes de qualquer <code class="language-markup">&lttbody&gt</code>, <code class="language-markup">&lttfoot&gt</code>, e <code class="language-markup">&lttr&gt</code>.</p>
@@ -325,7 +365,7 @@
                             
                         </li>
 
-                        <li><strong>Atributos id e header:</strong>
+                        <li><strong><h6>Atributos id e header:</h6></strong>
                             <ol>
                                 <li>
                                     <p>O atributo 'id' de uma tabela adiciona um identificador, que deve ser único por elemento, para maior identificação do elemento e para que possa ser usado como seletor via CSS. Exemplo: <code class="language-markup">&ltth  id="exemplo"&gt</code>.</p>
@@ -336,7 +376,7 @@
                             </ol>
                         </li>
                         
-                        <li><strong>Elementos colgroup , col e atributo scope:</strong>
+                        <li><strong><h6>Elementos colgroup , col e atributo scope:</h6></strong>
                             <ol>
                                 <li>
                                     <p>A tag <code class="language-markup">&ltcolgroup&gt</code> especifica um grupo de uma ou mais colunas em uma tabela para formatação. É útil para aplicar estilos a colunas inteiras, em vez de repetir os estilos de cada célula, para cada linha.</p>
@@ -371,51 +411,66 @@
                     <div class="code-block">
                         <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                         <pre><code class="language-markup">
-
-&lttable summary="Preços em reais  
-no atacado e no varejo para duas bitolas 
-de porcas e parafusos de latão e de aço.
-Existem dois níveis de cabeçalhos de 
-colunas."&gt
-
+&lttable summary="Preços em reais  no atacado e no varejo para duas bitolas 
+de porcas e parafusos de latão e de aço. Existem dois níveis de cabeçalhos 
+de colunas."&gt
 &ltcaption&gt
-    Preços em reais para porcas e parafusos de
-    latão e aço
+Preços em reais  para porcas e parafusos de latão e aço
 &lt/caption&gt
-
 &ltcolgroup&gt
-    &ltcolgroup&gt
-    &ltcolgroup&gt
-    &ltthead&gt
-        &lttr&gt
+    &ltcol span="2" style="background-color:red"&gt
+    &ltcol span="3" style="background-color:yellow"&gt
+&lt/colgroup&gt
+&ltthead&gt
+    &lttr&gt
         &lttd&gt&lt/td&gt
         &ltth scope="colgroup"&gtLatão&lt/th&gt
-        &ltth scope="colgroup"&gtAço&lt/th &lt/tr&gt &lttr&gt
+        &ltth scope="colgroup"&gtAço&lt/th&gt
+    &lt/tr&gt
+    &lttr&gt
         &lttd&gt&lt/td&gt
         &ltth scope="col"&gtParafusos&lt/th&gt
         &ltth scope="col"&gtPorcas&lt/th&gt
         &ltth scope="col"&gtParafusos&lt/th&gt
         &ltth scope="col"&gtPorcas&lt/th&gt
     &lt/tr&gt
-    &lt/thead&gt
+&lt/thead&gt
 &lttbody&gt
     &lttr&gt
-    &ltth scope="rowgroup"&gt10cm&lt/th&gt
+        &ltth scope="rowgroup"&gt10cm&lt/th&gt
     &lt/tr&gt
     &lttr&gt
-    &ltth scope="row"&gtAtacado&lt/th&gt
+        &ltth scope="row"&gtAtacado&lt/th&gt
         &lttd&gt1,00&lt/td&gt
         &lttd&gt1,25&lt/td&gt
         &lttd&gt1,20&lt/td&gt
         &lttd&gt1,00&lt/td&gt
     &lt/tr&gt
     &lttr&gt
-    &ltth scope="row"&gtVarejo&lt/th&gt
-        &lttd&gt1,00&lt/td&gt
-        &lttd&gt1,25&lt/td&gt
-        &lttd&gt1,20&lt/td&gt
-        &lttd&gt1,00&lt/td&gt
+        &ltth scope="row"&gtVarejo&lt/th&gt
+        &lttd&gt2,00&lt/td&gt
+        &lttd&gt3,00&lt/td&gt
+        &lttd&gt1,80&lt/td&gt
+        &lttd&gt1,60&lt/td&gt
     &lt/tr&gt
+    &lttr&gt
+        &ltth scope="rowgroup"&gt20cm&lt/th&gt
+    &lt/tr&gt
+    &lttr&gt
+        &ltth scope="row"&gtAtacado&lt/th&gt
+        &lttd&gt1,20&lt/td&gt
+        &lttd&gt1,30&lt/td&gt
+        &lttd&gt1,00&lt/td&gt
+        &lttd&gt0,80&lt/td&gt
+    &lt/tr&gt
+    &lttr&gt
+        &ltth scope="row"&gtVarejo&lt/th&gt
+        &lttd&gt1,60&lt/td&gt
+        &lttd&gt2,00&lt/td&gt
+        &lttd&gt2,00&lt/td&gt
+        &lttd&gt1,50&lt/td&gt
+    &lt/tr&gt
+&lt/tbody&gt
 &lt/table&gt
                      </code></pre>
                     </div>
@@ -425,51 +480,66 @@ colunas."&gt
 
                 <div class="block">
                     <h3 class="sub-title text-center">Resultado</h3>
-                    <table summary="Preços em reais  
-    no atacado e no varejo para duas bitolas 
-    de porcas e parafusos de latão e de aço.
-    Existem dois níveis de cabeçalhos de 
-    colunas.">
-
-    <caption style="caption-side: top; text-align: center; color: initial;">
-      Preços em reais para porcas e parafusos de
-      latão e aço
-    </caption>
-
-    <colgroup>
-      <colgroup>
-        <colgroup>
-        <thead>
-      <tr>
-        <td></td>
-        <th scope="colgroup">Latão</th>
-        <th scope="colgroup">Aço</th </tr> <tr>
-        <td></td>
-        <th scope="col">Parafusos</th>
-        <th scope="col">Porcas</th>
-        <th scope="col">Parafusos</th>
-        <th scope="col">Porcas</th>
-      </tr>
-      </thead>
-    <tbody>
-      <tr>
-        <th scope="rowgroup">10cm</th>
-      </tr>
-      <tr>
-        <th scope="row">Atacado</th>
-        <td>1,00</td>
-        <td>1,25</td>
-        <td>1,20</td>
-        <td>1,00</td>
-      </tr>
-      <tr>
-        <th scope="row">Varejo</th>
-        <td>1,00</td>
-        <td>1,25</td>
-        <td>1,20</td>
-        <td>1,00</td>
-      </tr>
-  </table>
+                    <table summary="Preços em reais  no atacado e no varejo para duas bitolas de porcas e parafusos de latão e de aço. Existem dois níveis de cabeçalhos de colunas." style="border-collapse: initial; color:initial; font-color:initial;">
+                        <caption style="caption-side: top; text-align: center; color: initial;">
+                        Preços em reais  para porcas e parafusos de latão e aço
+                        </caption>
+                        <colgroup>
+                          <col span="1" style="background-color:red">
+                          <col span="2" style="background-color:red">
+                          <col span="3" style="background-color:yellow">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <td></td>
+                            <th scope="colgroup">Latão</th>
+                            <th scope="colgroup">Aço</th>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <th scope="col">Parafusos</th>
+                            <th scope="col">Porcas</th>
+                            <th scope="col">Parafusos</th>
+                            <th scope="col">Porcas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="rowgroup" style="text-align: center;">10cm</th>
+                          </tr>
+                          <tr>
+                            <th scope="row" style="text-align: center;">Atacado</th>
+                            <td>1,00</td>
+                            <td>1,25</td>
+                            <td>1,20</td>
+                            <td>1,00</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" style="text-align: center;">Varejo</th>
+                            <td>2,00</td>
+                            <td>3,00</td>
+                            <td>1,80</td>
+                            <td>1,60</td>
+                          </tr>
+                          <tr>
+                            <th scope="rowgroup" style="text-align: center;">20cm</th>
+                          </tr>
+                          <tr>
+                            <th scope="row" style="text-align: center;">Atacado</th>
+                            <td>1,20</td>
+                            <td>1,30</td>
+                            <td>1,00</td>
+                            <td>0,80</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" style="text-align: center;">Varejo</th>
+                            <td>1,60</td>
+                            <td>2,00</td>
+                            <td>2,00</td>
+                            <td>1,50</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
                 <!--//block-->
 
@@ -478,7 +548,119 @@ colunas."&gt
         </div>
         <!--//container-->
     </section>
-    <!--//features-->    
+    <!--//features--> 
+    
+    <!-- ******DOCS****** -->
+    <section id="exemplos" class="docs section">
+        <div class="container">
+            <div class="docs-inner">
+                <h2 class="title text-center">Dicas para marcar tabelas</h2>
+                <div class="block">
+                    <p>Para que não seja necessário o uso de células vazias existem dois atributos para <code class="language-markup">&ltth&gt</code> e <code class="language-markup">&lttd&gt</code> que são <code class="language-markup">colspan</code> e <code class="language-markup">rowspan</code>, onde uma célula espande seu uso dentro da linha(row) ou da coluna(col), o valor da quantidade células no alinhamento de uma linha ou de uma coluna é informado no atributo para que possa ser interpretado.</p>
+                    <ul>
+                        <li>
+                            <p><strong>Exemplo:</strong><code class="language-markup">&lttd  colspan="2"&gt</code></p>
+                        </li>
+                        <li>
+                            <p><strong>Exemplo:</strong><code class="language-markup">&lttd  rowspan="3"&gt</code></p>
+                        </li>
+                    </ul>
+                    <h3 class="sub-title text-center">HTML</h3>
+                    <div class="code-block">
+                        <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                        <pre><code class="language-markup">
+&lttable&gt
+&lttr&gt
+    &lttd colspan="2"&gt#&lt/td&gt
+    &lttd colspan="2"&gt#&lt/td&gt
+    &lttd colspan="2"&gt#&lt/td&gt
+&lt/tr&gt
+&lttr&gt
+    &lttd rowspan="5"&gtTeste&lt/td&gt 
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd rowspan="5" &gtTeste&lt/td&gt
+    &lttd rowspan="5" &gtTeste&lt/td&gt    
+&lt/tr&gt
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt         
+    &lttd&gtTeste&lt/td&gt         
+&lt/tr&gt
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+&lt/tr&gt
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+&lt/tr&gt
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+&lt/tr&gt
+&lt/table&gt
+                         </code></pre>
+                    </div>
+                    <!--//code-block-->
+                </div>
+                <!--//block-->
+
+                <div class="block">
+                    <h3 class="sub-title text-center">Resultado</h3>
+                    <table>
+                        <tr>
+                            <td colspan="2">#</td>
+                            <td colspan="2">#</td>
+                            <td colspan="2">#</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5">Teste</td> 
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td rowspan="5">Teste</td>
+                            <td rowspan="5">Teste</td>
+                            
+                        </tr>
+                  
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>         
+                            <td>Teste</td>         
+                        </tr>
+                
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                        </tr>
+                
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                        </tr>
+                
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--//block-->
+
+            </div>
+            <!--//docs-inner-->
+        </div>
+        <!--//container-->
+    </section>
+    <!--//features-->
 
     <!-- ******DOCS****** -->
     <section id="exemplos" class="docs section">
@@ -488,7 +670,7 @@ colunas."&gt
                 <div class="block">
                     <p>Agora vamos aplicar alguns estilos na tabela para que ela seja melhor visualizada. Levando em consideração que as melhores práticas removeram o suporte aos atributos no HTML5, usarei CSS na tabela da sessão anterior.</p>
                     <ul class="list-unstyled">
-                        <li><strong>Bordas:</strong>
+                        <li><strong><h6>Bordas:</h6></strong>
                             <p>O atributo <code class="language-markup">border</code> especifica se uma borda deve ser exibida ao redor das células da tabela ou não. </p>
                             <ul>
                                 <li>
@@ -499,7 +681,7 @@ colunas."&gt
                             </ul>
                         </li>
                         <li>
-                            <strong>Tipografia e posicionamentos:</strong>
+                            <strong><h6>Tipografia e posicionamentos:</h6></strong>
                             <ol>
                                 <li>
                                      <p>
@@ -539,7 +721,7 @@ table, th, td {
                                 </li>
                             </ol>
                         </li>
-                        <li><strong>Cores de fundo:</strong>
+                        <li><strong><h6>Cores de fundo:</h6></strong>
                             <p>É possível alterar a cor de fundo da tabela com o atributo <code class="language-markup">bgcolor</code>.
                                 <ul>
                                     <li>
@@ -548,40 +730,59 @@ table, th, td {
                                 </ul>
                             </p>
                         </li>
-                        <li><strong>Imagens de fundo:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
+                        <li><strong><h6>Imagens de fundo:</h6></strong>
+                            <p>É possível alterar o fundo da tabela e colocar uma imgaem com o atributo <code class="language-markup">background</code>.
+                                <ul>
+                                    <li>
+                                        <p><strong>Exemplo:</strong><code class="language-markup">&lttable  background="imagem.jpeg"&gt</code></p>
+                                    </li>
+                                </ul>
+                            </p>
                         </li>
                     </ul>
                     <h3 class="sub-title text-center">HTML</h3>
                     <div class="code-block">
                         <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                         <pre><code class="language-markup">
-        &lttable&gt
-          &lttr&gt
-            &ltth&gtCol1&lt/th&gt
-            &ltth&gtCol2&lt/th&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow1&lt/td&gt
-            &lttd&gtRow2&lt/td&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow3&lt/td&gt
-            &lttd&gtRow4&lt/td&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow5&lt/td&gt
-            &lttd&gtRow6&lt/td&gt
-          &lt/tr&gt
-        &lt/table&gt
-                         </code></pre>
+&lttable border="5"  align="center" bgcolor="orange"&gt
+&lttr&gt
+    &lttd colspan="2" align="left"&gt#&lt/td&gt
+    &lttd colspan="2" align="center"&gt#&lt/td&gt
+    &lttd colspan="2" align="right"&gt#&lt/td&gt
+&lt/tr&gt
+&lttr&gt
+    &lttd rowspan="5" valign="top" background="bg.jpg" 
+        style="color:aliceblue;"&gtTeste&lt/td&gt 
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd rowspan="5" valign="middle"background="bg.jpg" 
+        style="color:aliceblue;"&gtTeste&lt/td&gt 
+    &lttd rowspan="5" valign="bottom"background="bg.jpg" 
+        style="color:aliceblue;"&gtTeste&lt/td&gt             
+&lt/tr&gt  
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt         
+    &lttd&gtTeste&lt/td&gt         
+&lt/tr&gt
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+&lt/tr&gt
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+&lt/tr&gt
+&lttr&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+    &lttd&gtTeste&lt/td&gt
+&lt/tr&gt
+&lt/table&gt
+</code></pre>
                     </div>
                     <!--//code-block-->
                 </div>
@@ -589,22 +790,39 @@ table, th, td {
 
                 <div class="block">
                     <h3 class="sub-title text-center">Resultado</h3>
-                    <table>
+                    <table border="5" bgcolor="orange" align="center" style="color: black;">
                         <tr>
-                            <th>Col1</th>
-                            <th>Col2</th>
+                            <td colspan="2" align="left">#</td>
+                            <td colspan="2" align="center">#</td>
+                            <td colspan="2" align="right">#</td>
                         </tr>
                         <tr>
-                            <td>Row1</td>
-                            <td>Row2</td>
+                            <td rowspan="5" valign="top" background="bg.jpg" style="color:aliceblue;">Teste</td> 
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td rowspan="5" valign="middle"background="bg.jpg" style="color:aliceblue;">Teste</td> 
+                            <td rowspan="5" valign="bottom"background="bg.jpg" style="color:aliceblue;">Teste</td>             
+                        </tr>  
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>         
+                            <td>Teste</td>         
                         </tr>
                         <tr>
-                            <td>Row3</td>
-                            <td>Row4</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
                         </tr>
                         <tr>
-                            <td>Row5</td>
-                            <td>Row6</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                        </tr>
+                        <tr>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td>Teste</td>
                         </tr>
                     </table>
                 </div>
@@ -615,78 +833,7 @@ table, th, td {
         </div>
         <!--//container-->
     </section>
-    <!--//features-->
-
-    <!-- ******DOCS****** -->
-    <section id="exemplos" class="docs section">
-            <div class="container">
-                <div class="docs-inner">
-                    <h2 class="title text-center">Dicas para marcar tabelas</h2>
-                    <div class="block">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis
-                            bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a
-                            eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur
-                            eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam
-                            vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit
-                            turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean
-                            arcu augue, feugiat id magna id, lacinia ultrices odio.</p>
-                        <h3 class="sub-title text-center">HTML</h3>
-                        <div class="code-block">
-                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                            <pre><code class="language-markup">
-            &lttable&gt
-              &lttr&gt
-                &ltth&gtCol1&lt/th&gt
-                &ltth&gtCol2&lt/th&gt
-              &lt/tr&gt
-              &lttr&gt
-                &lttd&gtRow1&lt/td&gt
-                &lttd&gtRow2&lt/td&gt
-              &lt/tr&gt
-              &lttr&gt
-                &lttd&gtRow3&lt/td&gt
-                &lttd&gtRow4&lt/td&gt
-              &lt/tr&gt
-              &lttr&gt
-                &lttd&gtRow5&lt/td&gt
-                &lttd&gtRow6&lt/td&gt
-              &lt/tr&gt
-            &lt/table&gt
-                             </code></pre>
-                        </div>
-                        <!--//code-block-->
-                    </div>
-                    <!--//block-->
-    
-                    <div class="block">
-                        <h3 class="sub-title text-center">Resultado</h3>
-                        <table>
-                            <tr>
-                                <th>Col1</th>
-                                <th>Col2</th>
-                            </tr>
-                            <tr>
-                                <td>Row1</td>
-                                <td>Row2</td>
-                            </tr>
-                            <tr>
-                                <td>Row3</td>
-                                <td>Row4</td>
-                            </tr>
-                            <tr>
-                                <td>Row5</td>
-                                <td>Row6</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <!--//block-->
-    
-                </div>
-                <!--//docs-inner-->
-            </div>
-            <!--//container-->
-        </section>
-        <!--//features-->
+    <!--//features-->    
 
     <!-- ******DOCS****** -->
     <section id="exemplos" class="docs section">
@@ -694,69 +841,73 @@ table, th, td {
             <div class="docs-inner">
                 <h2 class="title text-center">Esquemas de posicionamento CSS</h2>
                 <div class="block">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis
-                        bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a
-                        eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur
-                        eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam
-                        vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit
-                        turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean
-                        arcu augue, feugiat id magna id, lacinia ultrices odio.</p>
+                    <p>O posicionamento dos elementos é uma parte importante da criação dos layouts. Assim, precisamos conhecer e entender as possibilidades que temos dentro da propriedade position, isto é, as opções fixed, relative e absolute. A propriedade position também aceita o valor static, que representa o valor padrão, mas ele não indica posicionamento algum, ou seja, é o valor para "nenhum posicionamento específico" do elemento.</p>
                     <ul class="list-unstyled">
-                        <li><strong>Esquema normal:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
-                        </li>
-                        <li><strong>Esquema float:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
-                        </li>
-                        <li><strong>Esquema absoluto:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
-                        </li>
+                        <li><strong><h6>Esquema Normal:</h6></strong>
+                            <p>A primeira opção de posicionamento para um elemento é a <code class="language-css">relative</code>. Como o nome sugere, ela especifica uma posição relativa do elemento em relação a algo: o elemento pai.</p>
 
+                            <p>A posição é definida através de quatro outras propriedades: top, bottom, left e right, que indicam a distância com relação ao topo, base, esquerda e direita, respectivamente, tomando como referência o posicionamento do elemento pai.</p>
+                        </li>
+                        <li><strong><h6>Esquema Absoluto:</h6></strong>
+                            <p>O valor <code class="language-css">absolute</code> é o mais complicado. Este valor se comporta como o <code class="language-css">fixed</code>, porém tendo como referência a posição do elemento relativo mais próximo de onde está contido, ao invés do viewport. Se um elemento <code class="language-css">position:absolute</code> não possuir elementos ancestrais posicionados relativamente, ele utilizará o body como referência.</p>
+                        </li>
+                        <li><strong><h6>Esquema Flutuante:</h6></strong>
+                            <p>Outra propriedade CSS utilizada para o layout é o <code class="language-css">float</code>. O Float serve pra quebrar o texto ao redor de um elemento.</p>
+                        </li>
                     </ul>
                     <h3 class="sub-title text-center">HTML</h3>
                     <div class="code-block">
                         <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                         <pre><code class="language-markup">
-        &lttable&gt
-          &lttr&gt
-            &ltth&gtCol1&lt/th&gt
-            &ltth&gtCol2&lt/th&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow1&lt/td&gt
-            &lttd&gtRow2&lt/td&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow3&lt/td&gt
-            &lttd&gtRow4&lt/td&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow5&lt/td&gt
-            &lttd&gtRow6&lt/td&gt
-          &lt/tr&gt
-        &lt/table&gt
-                         </code></pre>
+&ltdiv class="relative-parent"&gt
+&ltdiv class="relative"&gt
+Elemento filho com posicionamento relativo
+&ltp&gt
+    &ltimg src="bg.jpg" alt="Pineapple" class="img-float"&gt
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Phasellus imperdiet, nulla et dictum interdum, 
+    nisi lorem egestas odio.
+&lt/p&gt
+&lt/div&gt
+&ltdiv class="absolute"&gt
+    Elemento com posicionamento absoluto
+&lt/div&gt        
+&lt/div&gt
+</code></pre>
+                    </div>
+                    <h3 class="sub-title text-center">CSS</h3>
+                    <div class="code-block">
+                        <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                        <pre><code class="language-css">
+.relative-parent {
+    background: #156236;
+}
+
+.relative {
+    background: #af8542;
+    height: 230px;
+    width: 300px;
+    position: relative;
+    top: 20px;
+    left: 45px;
+    text-align: justify;
+}
+
+.absolute {
+    background: #c590f5;
+    height: 60px;
+    width: 120px;
+    position: absolute;
+    text-align: center;
+}
+
+.img-float {
+    float: right;
+    width:170px;
+    height:170px;
+    margin-left:15px;
+}
+</code></pre>
                     </div>
                     <!--//code-block-->
                 </div>
@@ -764,24 +915,20 @@ table, th, td {
 
                 <div class="block">
                     <h3 class="sub-title text-center">Resultado</h3>
-                    <table>
-                        <tr>
-                            <th>Col1</th>
-                            <th>Col2</th>
-                        </tr>
-                        <tr>
-                            <td>Row1</td>
-                            <td>Row2</td>
-                        </tr>
-                        <tr>
-                            <td>Row3</td>
-                            <td>Row4</td>
-                        </tr>
-                        <tr>
-                            <td>Row5</td>
-                            <td>Row6</td>
-                        </tr>
-                    </table>
+                    <div>
+                        <div class="relative-parent">
+                            <div class="relative">
+                            Elemento filho com posicionamento relativo
+                            <p>
+                                <img src="bg.jpg" alt="Pineapple" class="img-float">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum.
+                            </p>
+                            </div>
+                            <div class="absolute">
+                                Elemento com posicionamento absoluto
+                            </div>        
+                        </div>
+                    </div>
                 </div>
                 <!--//block-->
 
@@ -798,48 +945,36 @@ table, th, td {
             <div class="docs-inner">
                 <h2 class="title text-center">Posicionamento com z-index</h2>
                 <div class="block">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis
-                        bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a
-                        eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur
-                        eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam
-                        vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit
-                        turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean
-                        arcu augue, feugiat id magna id, lacinia ultrices odio.</p>
-                    <ul class="list-unstyled">
-                        <li><strong>Contexto para empilhamento:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
+                    <p>A propriedade <code class="language-markup">z-index</code> especifica a ordem da pilha de um elemento.</p>
+                    <p>Um elemento com maior ordem de empilhamento sempre está na frente de um elemento com uma ordem de pilha menor.</p>   
+                    <ul>
+                        <li>
+                            <p><strong>Nota:</strong>O <code class="language-markup">z-index</code> só funciona nos elementos posicionados (<code class="language-css">position: absolute</code>, <code class="language-css">position: relative</code>, <code class="language-css">position: fixed</code> ou <code class="language-css">position: sticky</code>).</p>
                         </li>
-                    </ul>
+                        <li>
+                            <p><strong>Sintaxe:</strong><code class="language-css"> z-index: auto|number|initial|inherit </code>).</p>
+                        </li>
+                    </ul>    
                     <h3 class="sub-title text-center">HTML</h3>
                     <div class="code-block">
                         <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                         <pre><code class="language-markup">
-        &lttable&gt
-          &lttr&gt
-            &ltth&gtCol1&lt/th&gt
-            &ltth&gtCol2&lt/th&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow1&lt/td&gt
-            &lttd&gtRow2&lt/td&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow3&lt/td&gt
-            &lttd&gtRow4&lt/td&gt
-          &lt/tr&gt
-          &lttr&gt
-            &lttd&gtRow5&lt/td&gt
-            &lttd&gtRow6&lt/td&gt
-          &lt/tr&gt
-        &lt/table&gt
-                         </code></pre>
+&lth1>The z-index Property&lt/h1&gt
+&ltimg class="img-zindex" src="bg.jpg" width="100" height="140"&gt    
+&ltp&gtPorque a imagem tem um z-index de -1, ela será colocada atrás do título.&lt/p&gt
+</code></pre>
+                    </div>
+                    <h3 class="sub-title text-center">CSS</h3>
+                    <div class="code-block">
+                        <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                        <pre><code class="language-css">
+.img-zindex {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+</code></pre>
                     </div>
                     <!--//code-block-->
                 </div>
@@ -847,24 +982,20 @@ table, th, td {
 
                 <div class="block">
                     <h3 class="sub-title text-center">Resultado</h3>
-                    <table>
-                        <tr>
-                            <th>Col1</th>
-                            <th>Col2</th>
-                        </tr>
-                        <tr>
-                            <td>Row1</td>
-                            <td>Row2</td>
-                        </tr>
-                        <tr>
-                            <td>Row3</td>
-                            <td>Row4</td>
-                        </tr>
-                        <tr>
-                            <td>Row5</td>
-                            <td>Row6</td>
-                        </tr>
-                    </table>
+                    <div>
+                        <div class="relative-parent">
+                            <div class="relative-zindex">
+                            Elemento filho com posicionamento relativo
+                            <p>
+                                <img src="bg.jpg" alt="Pineapple" class="img-float">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum.
+                            </p>
+                            </div>
+                            <div class="absolute">
+                                Elemento com posicionamento absoluto
+                            </div>        
+                        </div>
+                    </div>
                 </div>
                 <!--//block-->
 
@@ -874,9 +1005,6 @@ table, th, td {
         <!--//container-->
     </section>
     <!--//features-->
-
-
-
 
     <!-- ******CONTACT****** -->
     <section id="encerramento" class="contact section has-pattern">
