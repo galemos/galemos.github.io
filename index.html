@@ -486,55 +486,69 @@ colunas."&gt
             <div class="docs-inner">
                 <h2 class="title text-center">Estilização de tabelas</h2>
                 <div class="block">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit pretium, quis
-                        bibendum mauris mollis. Pellentesque et magna id leo consequat mollis. Integer imperdiet nibh a
-                        eros tincidunt, at laoreet ex dignissim. Ut pellentesque vestibulum mi eu sagittis. Curabitur
-                        eleifend sed urna a pulvinar. Pellentesque scelerisque dapibus urna, at imperdiet elit aliquam
-                        vestibulum. Duis sagittis porta enim, sit amet euismod erat varius at. Duis tempor suscipit
-                        turpis at vulputate. Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean
-                        arcu augue, feugiat id magna id, lacinia ultrices odio.</p>
+                    <p>Agora vamos aplicar alguns estilos na tabela para que ela seja melhor visualizada. Levando em consideração que as melhores práticas removeram o suporte aos atributos no HTML5, usarei CSS na tabela da sessão anterior.</p>
                     <ul class="list-unstyled">
                         <li><strong>Bordas:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
+                            <p>O atributo <code class="language-markup">border</code> especifica se uma borda deve ser exibida ao redor das células da tabela ou não. </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <stronger>Exemplo:</stronger> <code class="language-markup">&lttable  border="1|0"&gt</code>.                                        
+                                    </p>
+                                </li>
+                            </ul>
                         </li>
-                        <li><strong>Tipografia e posicionamentos:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
+                        <li>
+                            <strong>Tipografia e posicionamentos:</strong>
+                            <ol>
+                                <li>
+                                     <p>
+                                        As propriedades de <code class="language-css">font-family</code> deve conter vários nomes de fonte como um sistema de "fallback". Se o navegador não suportar a primeira fonte, ele tentará a próxima fonte e assim por diante.
+                                    </p>
+                                    <p>
+                                        Comece com a fonte desejada e termine com uma família genérica, para permitir que o navegador escolha uma fonte semelhante na família genérica, se nenhuma outra fonte estiver disponível.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                <stronger>Exemplo:</stronger> <pre><code class="language-css">
+table, th, td {
+    font-family: "Times New Roman", Times, serif;
+}</code></pre>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>                                    
+                                    <p>
+                                        A propriedade <code class="language-markup">align</code> define o alinhamento horizontal da tabela(left, center ou righ = esquerdo, centro ou direita) do conteúdo em <code class="language-markup">&ltth&gt</code> ou <code class="language-markup">&lttd&gt</code>. Por padrão, o conteúdo dos elementos <code class="language-markup">&ltth&gt</code> é alinhado ao centro e o conteúdo dos elementos <code class="language-markup">&lttd&gt</code> é alinhado à esquerda e do elemento <code class="language-markup">&lttable&gt</code> a esquerda.
+                                        <ul>
+                                            <li>
+                                                <p><strong>Exemplo:</strong><code class="language-markup">&lttable  align="left|center|right"&gt</code></p>
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        A propriedade <code class="language-markup">valign</code> define o alinhamento vertical do conteúdo da célula(top, middle ou bottom = topo, centralizado ou base)  em <code class="language-markup">&ltth&gt</code> ou <code class="language-markup">&lttd&gt</code>. Por padrão, o conteúdo dos elementos são middle(centralizado).
+                                        <ul>
+                                            <li>
+                                                <p><strong>Exemplo:</strong><code class="language-markup">&lttr  align="left|center|right" valign="top|middle|bottom"&gt</code></p>
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </li>
+                            </ol>
                         </li>
                         <li><strong>Cores de fundo:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
+                            <p>É possível alterar a cor de fundo da tabela com o atributo <code class="language-markup">bgcolor</code>.
+                                <ul>
+                                    <li>
+                                        <p><strong>Exemplo:</strong><code class="language-markup">&lttable  align="left|center|right" valign="top|middle|bottom"&gt</code></p>
+                                    </li>
+                                </ul>
+                            </p>
                         </li>
                         <li><strong>Imagens de fundo:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
-                        </li>
-                        <li><strong>Exemplo prático:</strong>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
                                 pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
                                 Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
