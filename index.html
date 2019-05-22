@@ -335,16 +335,36 @@
                                 </li>
                             </ol>
                         </li>
-
+                        
                         <li><strong>Elementos colgroup , col e atributo scope:</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus odio at elit
-                                pretium, quis bibendum mauris mollis. Pellentesque et magna id leo consequat mollis.
-                                Integer imperdiet nibh a eros tincidunt, at laoreet ex dignissim. Ut pellentesque
-                                vestibulum mi eu sagittis. Curabitur eleifend sed urna a pulvinar. Pellentesque
-                                scelerisque dapibus urna, at imperdiet elit aliquam vestibulum. Duis sagittis porta
-                                enim, sit amet euismod erat varius at. Duis tempor suscipit turpis at vulputate.
-                                Suspendisse leo ipsum, posuere in accumsan eu, rhoncus vel tellus. Aenean arcu augue,
-                                feugiat id magna id, lacinia ultrices odio.</p>
+                            <ol>
+                                <li>
+                                    <p>A tag <code class="language-markup">&ltcolgroup&gt</code> especifica um grupo de uma ou mais colunas em uma tabela para formatação. É útil para aplicar estilos a colunas inteiras, em vez de repetir os estilos de cada célula, para cada linha.</p>
+                                    
+                                    <ul>
+                                        <li><p><strong>Nota</strong>: A tag <code class="language-markup">&ltcolgroup&gt</code> deve ser um filho de um elemento <code class="language-markup">&lttable&gt</code>, depois de qualquer elemento <code class="language-markup">&ltcaption&gt</code> e antes de qualquer elemento <code class="language-markup">&ltthead&gt</code>, <code class="language-markup">&lttbody&gt</code>, <code class="language-markup">&lttfoot&gt</code> e <code class="language-markup">&lttr&gt</code>.</p></li>
+                                            
+                                        <li><p><strong>Dica</strong>: Para definir propriedades diferentes para uma coluna dentro de um <code class="language-markup">&ltcolgroup&gt</code>, use a tag <col> dentro da tag <code class="language-markup">&ltcolgroup&gt</code>.</p></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <p>A tag <code class="language-markup">&ltcol&gt</code> especifica as propriedades da coluna para cada coluna dentro de um elemento <code class="language-markup">&ltcolgroup&gt</code>.
+
+                                        A tag <code class="language-markup">&ltcol&gt</code> é útil para aplicar estilos a colunas inteiras, em vez de repetir os estilos de cada célula, para cada linha.</p>
+                                </li>
+                                <li>
+                                    <p>O atributo scope define uma maneira de associar células de cabeçalho e células de dados em uma tabela, identifica se uma célula é um cabeçalho para uma coluna, linha ou grupo de colunas ou linhas.</p>
+                                    <ul>
+                                        <li>
+                                            <p><strong>Nota:</strong>Atributo scope não é suportado no HTML5</p>
+                                        </li>
+                                        <li>
+                                            <p><strong>Exemplo:</strong><td scope="col|row|colgroup|rowgroup"></td></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
                         </li>
                     </ul>
                     <h3 class="sub-title text-center">HTML</h3>
